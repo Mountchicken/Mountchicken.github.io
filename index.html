@@ -1,449 +1,409 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>笨比的主页🤗</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/noscript.css"
-    /></noscript>
-    <script src="js/vue.min.js" language="JavaScript"></script>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/html2canvas.min.js" async="async"></script>
-    <style>
-      img {
-        border-radius: 10px;
-      }
-    </style>
-  </head>
 
-  <body class="is-preload">
-    <!-- Loader -->
-    <link rel="stylesheet" href="assets/css/loader.css" />
-    <div class="loader">
-      <div class="container">
-        <h1>👴</h1>
-        <p>来辣</p>
-      </div>
+<head>
+  <title>笨比的主页🤗</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
+  <script src="js/vue.min.js" language="JavaScript"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/html2canvas.min.js" async="async"></script>
+  <style>
+    img {
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body class="is-preload">
+  <!-- Loader -->
+  <link rel="stylesheet" href="assets/css/loader.css" />
+  <div class="loader">
+    <div class="container">
+      <h1>👴</h1>
+      <p>来辣</p>
     </div>
+  </div>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Main -->
-      <section id="main">
-        <!-- Screenshot Button -->
-        <span
-          style="
+  <!-- Wrapper -->
+  <div id="wrapper">
+    <!-- Main -->
+    <section id="main">
+      <!-- Screenshot Button -->
+      <span style="
             display: flex;
             position: fixed;
             top: 2em;
             right: 2em;
             opacity: 0.65;
             font-size: 0.8em;
-          "
-          v-show="backButton"
-          ><button class="button small" @click="screenShot" id="screenshot">
-            Save Screenshot
-          </button></span
-        >
+          " v-show="backButton"><button class="button small" @click="screenShot" id="screenshot">
+          Save Screenshot
+        </button></span>
 
-        <!-- Welcome Message and Contacts -->
-        <header v-show="Contacts">
-          <span class="avatar"
-            ><img
-              src="images/handsome.jpg"
-              alt=""
-              style="width: 122px; height: 122px"
-          /></span>
-          <h1>JiangQing 蒋擎</h1>
-          <transition-group name="fade">
-            <div v-show="defaults" key="text">
-              <p>Hi There! You must be tired from traveling all over the Galaxy to come here. </p>
-              <p>
-                So take a rest.
-              </p>
-              <p>
-                Want to kown more about me? 
-              </p>
-              <button
-                class="button small fit"
-                @click="showAbout"
-                v-bind:disabled="onTransition==1"
-              >
-                Click Here!
-              </button>
-            </div>
-            <div
-              v-for="item in contacts"
-              v-if="item.show"
-              key="item.name"
-              v-html="item.content"
-            ></div>
-            <button
-              class="button small"
-              key="button"
-              @click="hideContact(true)"
-              style="opacity: 0.55"
-              v-show="backButton"
-            >
-              Return
+      <!-- Welcome Message and Contacts -->
+      <header v-show="Contacts">
+        <span class="avatar"><img src="images/avater.jpg" alt="" style="width: 135px; height: 142" /></span>
+        <h1>JiangQing 蒋擎</h1>
+        <transition-group name="fade">
+          <div v-show="defaults" key="text">
+            <p>Hello There! You must be tired from traveling all around to come here. Please take a rest now.</p>
+            <button class="button small fit" @click="showAbout" v-bind:disabled="onTransition==1">
+              Why not click here 👀
             </button>
-          </transition-group>
-        </header>
-        <hr />
-        <footer v-show="Contacts">
-          <ul class="icons">
-            <li v-for="item in contacts">
-              <a @click="showContact(item.name)" :class="item.icon"
-                >{{item.desc}}</a
-              >
-            </li>
-          </ul>
-        </footer>
+          </div>
+          <div v-for="item in contacts" v-if="item.show" key="item.name" v-html="item.content"></div>
+          <button class="button small" key="button" @click="hideContact(true)" style="opacity: 0.55"
+            v-show="backButton">
+            Return
+          </button>
+        </transition-group>
+      </header>
+      <hr />
+      <footer v-show="Contacts">
+        <ul class="icons">
+          <li v-for="item in contacts">
+            <a @click="showContact(item.name)" :class="item.icon">{{item.desc}}</a>
+          </li>
+        </ul>
+      </footer>
 
-        <!-- Page container -->
-        <header v-show="info">
-          <transition-group name="fade">
-            <h1 key="title">{{ title }}</h1>
-            <p key="text" v-for="text in texts">{{ text }}</p>
-            <div v-html="html" key="html"></div>
-            <img
-              v-bind:src="img"
-              key="img"
-              style="width: 95%; height: auto"
-              v-for="img in imgs"
-            />
-            <div key="buttons">
-              <button
-                class="button small"
-                v-bind:disabled="(nowPage < startPage || onTransition==1)"
-                @click="navigate(-1)"
-              >
-                Prev
-              </button>
-              <button
-                class="button small"
-                v-bind:disabled="(nowPage >= endPage - 2 || onTransition==1)"
-                @click="navigate(1)"
-              >
-                Next
-              </button>
-            </div>
-            <hr key="br" />
-            <button
-              @click="returnToContact"
-              key="button"
-              class="button fit"
-              v-bind:disabled="onTransition==1"
-            >
-              Return
+      <!-- Page container -->
+      <header v-show="info">
+        <transition-group name="fade">
+          <h1 key="title">{{ title }}</h1>
+          <p key="text" v-for="text in texts">{{ text }}</p>
+          <div v-html="html" key="html"></div>
+          <img v-bind:src="img" key="img" style="width: 95%; height: auto" v-for="img in imgs" />
+          <div key="buttons">
+            <button class="button small" v-bind:disabled="(nowPage < startPage || onTransition==1)"
+              @click="navigate(-1)">
+              Prev
             </button>
-          </transition-group>
-        </header>
-      </section>
+            <button class="button small" v-bind:disabled="(nowPage >= endPage - 2 || onTransition==1)"
+              @click="navigate(1)">
+              Next
+            </button>
+          </div>
+          <hr key="br" />
+          <button @click="returnToContact" key="button" class="button fit" v-bind:disabled="onTransition==1">
+            Return
+          </button>
+        </transition-group>
+      </header>
+    </section>
 
-      <!-- Footer -->
-      <footer id="footer"></footer>
-    </div>
+    <!-- Footer -->
+    <footer id="footer"></footer>
+  </div>
 
-    <!-- Scripts -->
-    <script>
-      if ("addEventListener" in window) {
-        window.addEventListener("load", function () {
-          document.body.className = document.body.className.replace(
-            /\bis-preload\b/,
-            ""
-          );
-        });
-        document.body.className += navigator.userAgent.match(/(MSIE|rv:11\.0)/)
-          ? " is-ie"
-          : "";
-      }
-    </script>
-    <!-- Vuejs -->
-    <script language="javascript">
-      var mainsec = new Vue({
-        el: "#main",
-        data: {
-          title: "", // The title of one page
-          html: "", // HTML text of one page
-          texts: [], // Pure texts of one page
-          imgs: [], // Image url of a page's images
+  <!-- Scripts -->
+  <script>
+    if ("addEventListener" in window) {
+      window.addEventListener("load", function () {
+        document.body.className = document.body.className.replace(
+          /\bis-preload\b/,
+          ""
+        );
+      });
+      document.body.className += navigator.userAgent.match(/(MSIE|rv:11\.0)/)
+        ? " is-ie"
+        : "";
+    }
+  </script>
+  <!-- Vuejs -->
+  <script language="javascript">
+    var mainsec = new Vue({
+      el: "#main",
+      data: {
+        title: "", // The title of one page
+        html: "", // HTML text of one page
+        texts: [], // Pure texts of one page
+        imgs: [], // Image url of a page's images
 
-          startPage: 1, // First page of the website
-          endPage: 3, // The last page of the website
+        startPage: 1, // First page of the website
+        endPage: 3, // The last page of the website
 
-          defaults: 1, // Show welcome message
-          Contacts: 1, // Detect if to show contacts
-          info: 0, // If to show designed pages
-          deg: 0, // Main section rotate deg
+        defaults: 1, // Show welcome message
+        Contacts: 1, // Detect if to show contacts
+        info: 0, // If to show designed pages
+        deg: 0, // Main section rotate deg
 
-          backButton: false,
+        backButton: false,
 
-          /*          Change things below this line               */
-          //Contact info
-          /**
-           * 有关下方icon的优化
-           * 因下方icon可以挂上用户自己的站点，所以做了如下修改
-           * jump为true，会直接跳转链接，链接为用户自定义的content字段
-           * jump为false，则是与原来一样。
-           */
-          contacts: [
-            {
-              name: "Wechat",
-              icon: "icon brands fa-weixin",
-              desc: "微信",
-              content: "<img src='images/wechatQR.jpg' class='qr' />",
-              show: false,
-              jump: false,
-            },
-            // {
-            //   name: "QQ",
-            //   icon: "icon brands fa-qq",
-            //   desc: "QQ",
-            //   content:
-            //     "<img src='images/wechatQR.jpg' class='qr' /><h2>QQ:XXXXXX</h2>",
-            //   show: false,
-            //   jump: false,
-            // },
-            {
-              name: "Github",
-              icon: "icon brands fa-github",
-              desc: "Github",
-              content: "https://github.com/Mountchicken",
-              show: false,
-              jump: true,
-            },
-          ],
+        /*          Change things below this line               */
+        //Contact info
+        /**
+         * 有关下方icon的优化
+         * 因下方icon可以挂上用户自己的站点，所以做了如下修改
+         * jump为true，会直接跳转链接，链接为用户自定义的content字段
+         * jump为false，则是与原来一样。
+         */
+        contacts: [
+          {
+            name: "Wechat",
+            icon: "icon brands fa-weixin",
+            desc: "微信",
+            content: "<img src='images/wechatQR.jpg' class='qr' />",
+            show: false,
+            jump: false,
+          },
+          // {
+          //   name: "QQ",
+          //   icon: "icon brands fa-qq",
+          //   desc: "QQ",
+          //   content:
+          //     "<img src='images/wechatQR.jpg' class='qr' /><h2>QQ:XXXXXX</h2>",
+          //   show: false,
+          //   jump: false,
+          // },
+          {
+            name: "Github",
+            icon: "icon brands fa-github",
+            desc: "Github",
+            content: "https://github.com/Mountchicken",
+            show: false,
+            jump: true,
+          },
+        ],
 
-          //Pages content
-          page: [
-            {
-              title: "Chapter 1: Who am I",
-              texts: [
-                "我是一名来自华南理工大学大四的学生，现在在金连文教授团队下当蹲哥.",
-                "我的研究方向很广，上到今天中午吃西区五楼还是四楼，下到晚上吃夜宵是否该点一串鸡翅.",
-    
-              ],
-              imgs: ["images/team.jpg"],
-            },
-            {
-              title: "Who am I",
-              texts: ["我同时也是18信创的一员，人送外号幽默哥",
-                      "我们班也是今年的校园十佳班集体，嗨呀，老光荣了",
-              ],
-              imgs: ["images/class1.jpg","images/class3.jpg"],
-              
-            },
-            {
-              title: "Who am I",
-              texts: ["我是一个很儒雅随和的人，平常爱和人幽默。我也是一个游戏专攻者，英雄联盟钻二选手，CyberPunk2077受害人，巫师3狂热爱好者",
-                      "我的人生哲理是:See each sunrise as a gift. 我的人生只有一条命，每天过的开心就满足了"],
-    
-              imgs: ["images/me1.jpg", "images/me2.jpg"],
-              
-              
-            },
-            {
-              title: "Chapter 2: My Reaserch",
-              texts: ["开源会让社区变得更好"],
-              html: `
-                    <p>场景文字识别推荐合集，包括论文推荐，数据集下载，代码推荐等，本人长期维护中(四年研究生就维护四年，哈哈哈)。</p>
+        //Pages content
+        page: [
+          {
+            title: "About me",
+            texts: [
+              "我是一名来自华南理工大学研一的学生，现在在金连文教授团队下当蹲哥.",
+              "我的研究方向很广，上到今天中午吃西区五楼还是四楼，下到晚上吃夜宵是否该点一串鸡翅.",
+            ],
+            imgs: ["images/team.jpg"],
+          },
+          {
+            title: "Who am I",
+            texts: ["我同时也是18信创的一员，人送外号幽默哥",
+              "我们班也是今年的校园十佳班集体，嗨呀，老光荣了",
+            ],
+            imgs: ["images/class1.jpg", "images/class3.jpg"],
+
+          },
+          {
+            title: "Who am I",
+            texts: ["我是一个很儒雅随和的人，平常爱和人幽默。我也是一个游戏专攻者，英雄联盟钻二选手，CyberPunk2077受害人，巫师3狂热爱好者",
+              "我的人生哲理是:See each sunrise as a gift. 我的人生只有一条命，每天过的开心就满足了"],
+
+            imgs: ["images/me1.jpg", "images/me2.jpg", "images/game.jpg"],
+          },
+          {
+            title: "My Open Source Projects",
+            texts: ["开源会让社区变得更好"],
+            html: `
+                    <p>在MMOCR实习了半年，参与了1.0的开发过程，赢！</p>
+                    <a href="https://github.com/open-mmlab/mmocr" target="_blank"><img src="https://github-readme-stats.vercel.app/api/pin/?username=open-mmlab&repo=mmocr&show_owner=true" alt="personal-page-repo" width="100%" /></a>
+                    <p>高效深度学习，一系列加速深度学习过程的技巧</p>
+                    <a href="https://github.com/Mountchicken/Efficient-Deep-Learning" target="_blank"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Mountchicken&repo=Efficient-Deep-Learning&show_owner=true" alt="personal-page-repo" width="100%" /></a>
+                    <p>场景文字识别推荐合集，包括论文推荐，数据集下载，代码推荐等</p>
 										<a href="https://github.com/HCIILAB/Scene-Text-Recognition-Recommendations" target="_blank"><img src="https://github-readme-stats.vercel.app/api/pin/?username=HCIILAB&repo=Scene-Text-Recognition-Recommendations&show_owner=true" alt="personal-page-repo" width="100%" /></a>
                     <p>场景文字识别相关算法复现，可以用作一个框架代码来使用，很好用的辣</p>
 										<a href="https://github.com/Mountchicken/Text-Recognition-on-Cross-Domain-Datasets" target="_blank"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Mountchicken&repo=Text-Recognition-on-Cross-Domain-Datasets&show_owner=true" alt="personal-page-repo" width="100%" /></a>
-										<p>基于CRNN和CTPN的一款OCR软件，用PtQt5进行APP封装，还挺有意思的。</p>
+										<p>基于CRNN和CTPN的一款OCR软件，用PtQt5进行APP封装，还挺有意思的</p>
 										<a href="https://github.com/Mountchicken/CTPN_CRNN_ChineseOCR_PyQt5" target="_blank"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Mountchicken&repo=CTPN_CRNN_ChineseOCR_PyQt5&show_owner=true" alt="UMAP-repo" width="100%" /></a>
-										<p>贾奎老师深度学习课的大作业，复现17年一篇CVPR论文，关于人体姿态识别的，成功复现并且准确率远超原论文。</p>
+										<p>复现17年一篇CVPR论文，关于人体姿态识别的，成功复现并且准确率远超原论文。</p>
                     <a href="https://github.com/Mountchicken/Two-Stream-RNN-Pytorch" target="_blank"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Mountchicken&repo=Two-Stream-RNN-Pytorch&show_owner=true" alt="UMAP-repo" width="100%" /></a>
                     `
-            },
-            {
-              title: "Eastern egg page!",
-              texts: ["Can only access with ?page=#"],
-              html: "<a href='https://github.com/Jiaocz/Personal-page' target='_blank'>Origin project</a>",
-            },
-          ],
-          /*            Change ends here                 */
+          },
+          {
+            title: "My Open Source Projects",
+            texts: ["2022年的狂热开发历程"],
+            imgs: ["images/github6.png", "images/github7.png"],
+          },
+          {
+            title: "My Open Source Projects",
+            texts: ["2022年的狂热开发历程"],
+            imgs: ["images/github6.png", "images/github7.png"],
+          },
+        ],
+        /*            Change ends here                 */
 
-          nowPage: 0, // Pointer to current page
-          onTransition: 0, //If the transition animation is on
+        nowPage: 0, // Pointer to current page
+        onTransition: 0, //If the transition animation is on
+      },
+      methods: {
+        showContact: function (name) {
+          let num = 0;
+          for (let i = 0; i < this.contacts.length; i++) {
+            if (this.contacts[i].name == name) {
+              num = i;
+              break;
+            }
+          }
+          if (this.contacts[num].jump == true) {
+            window.open(this.contacts[num].content);
+            return;
+          }
+          this.hideContact(false);
+          this.defaults = 0;
+          clearTimeout(this.timer);
+          this.timer = setTimeout(() => {
+            this.contacts[num].show = true;
+            this.backButton = true;
+          }, 500);
         },
-        methods: {
-          showContact: function (name) {
-            let num = 0;
-            for (let i = 0; i < this.contacts.length; i++) {
-              if (this.contacts[i].name == name) {
-                num = i;
-                break;
-              }
-            }
-            if (this.contacts[num].jump == true) {
-              window.open(this.contacts[num].content);
-              return;
-            }
-            this.hideContact(false);
-            this.defaults = 0;
-            clearTimeout(this.timer);
+        hideContact: function (neededDefault = true) {
+          for (i = 0; i < this.contacts.length; i++) {
+            this.contacts[i].show = false;
+          }
+          clearTimeout(this.timer);
+          if (neededDefault == true) {
+            this.backButton = false;
             this.timer = setTimeout(() => {
-              this.contacts[num].show = true;
-              this.backButton = true;
+              this.defaults = 1;
             }, 500);
-          },
-          hideContact: function (neededDefault = true) {
-            for (i = 0; i < this.contacts.length; i++) {
-              this.contacts[i].show = false;
-            }
-            clearTimeout(this.timer);
-            if (neededDefault == true) {
-              this.backButton = false;
-              this.timer = setTimeout(() => {
-                this.defaults = 1;
-              }, 500);
-            }
-          },
-          showAbout: function () {
-            this.rotateCard(-360, 1, "Y");
+          }
+        },
+        showAbout: function () {
+          this.rotateCard(-360, 1, "Y");
 
-            var that = this;
-            setTimeout(function () {
-              that.info = 1;
-              that.Contacts = 0;
-            }, 400);
-          },
-          returnToContact: function () {
-            this.rotateCard(360, 1, "Y");
-            var that = this;
-            setTimeout(function () {
-              that.info = 0;
-              that.Contacts = 1;
-            }, 400);
-          },
-          rotateCard: function (deg, time, axis) {
-            this.onTransition = 1;
-            this.deg += deg;
-            var ele = document.getElementById("main");
-            ele.style.transition = "transform " + time + "s 0s";
-            ele.style.transform = "rotate" + axis + "(" + this.deg + "deg)";
-            var that = this;
-            setTimeout(function () {
-              that.onTransition = 0;
-            }, time * 1000);
-          },
-          loadPage: function () {
-            this.title = this.page[this.nowPage].title;
-            this.texts = this.page[this.nowPage].texts;
-            this.html = this.page[this.nowPage].html;
-            this.imgs = this.page[this.nowPage].imgs;
-          },
-          navigate: function (m) {
-            if (m == 1) {
-              this.nowPage++;
-              this.rotateCard(-360, 1, "Y");
-              setTimeout("mainsec.loadPage()", 400);
-            }
-            if (m == -1) {
-              this.nowPage--;
-              this.rotateCard(+360, 1, "Y");
-              setTimeout("mainsec.loadPage()", 400);
-            }
-          },
-          screenShot: function () {
-            var button = document.getElementById("screenshot");
-            button.disabled = true;
-            button.innerHTML = "截图中…";
-            html2canvas(document.body).then((canvas) => {
-              var w = window.open();
-              w.document.title = "保存截图";
-              var i = w.document.createElement("img");
-              w.document.body.appendChild(i);
-              i.src = canvas.toDataURL("image/jpg");
-              w.alert("长按图片或直接保存图片即可");
-              button.innerHTML = "保存网页截图";
-              button.disabled = false;
-            });
-          },
-        },
-        mounted: function () {
-          this.loadPage();
-          this.startPage = 1;
-          this.endPage = this.page.length;
-        },
-      });
-    </script>
-    <style>
-      .fade-enter-active,
-      .fade-leave-active {
-        transition: all 0.5s;
-      }
-      .fade-enter,
-      .fade-leave-to {
-        opacity: 0;
-        transform: scale(0%, 0%);
-      }
-      .qr {
-        text-align: center;
-        width: 80%;
-        height: 80%;
-      }
-    </style>
-    <script>
-      let FirstTriggered = true;
-      function loaded() {
-        timeout = FirstTriggered ? 1200 : 0;
-        var page = getQueryVariable("page");
-        if (page >= mainsec.startPage && page <= mainsec.endPage && page) {
-          var m = mainsec;
-          mainsec.nowPage = page - 1;
+          var that = this;
           setTimeout(function () {
-            m.rotateCard(-360, 1, "Y");
-            setTimeout(function () {
-              m.loadPage();
-              m.info = 1;
-              m.Contacts = 0;
-            }, 400);
-          }, timeout);
-        }
-        if (FirstTriggered) {
-          $("body").on("dblclick", "img", function () {
-            window.open(this.src);
+            that.info = 1;
+            that.Contacts = 0;
+          }, 400);
+        },
+        returnToContact: function () {
+          this.rotateCard(360, 1, "Y");
+          var that = this;
+          setTimeout(function () {
+            that.info = 0;
+            that.Contacts = 1;
+          }, 400);
+        },
+        rotateCard: function (deg, time, axis) {
+          this.onTransition = 1;
+          this.deg += deg;
+          var ele = document.getElementById("main");
+          ele.style.transition = "transform " + time + "s 0s";
+          ele.style.transform = "rotate" + axis + "(" + this.deg + "deg)";
+          var that = this;
+          setTimeout(function () {
+            that.onTransition = 0;
+          }, time * 1000);
+        },
+        loadPage: function () {
+          this.title = this.page[this.nowPage].title;
+          this.texts = this.page[this.nowPage].texts;
+          this.html = this.page[this.nowPage].html;
+          this.imgs = this.page[this.nowPage].imgs;
+        },
+        navigate: function (m) {
+          if (m == 1) {
+            this.nowPage++;
+            this.rotateCard(-360, 1, "Y");
+            setTimeout("mainsec.loadPage()", 400);
+          }
+          if (m == -1) {
+            this.nowPage--;
+            this.rotateCard(+360, 1, "Y");
+            setTimeout("mainsec.loadPage()", 400);
+          }
+        },
+        screenShot: function () {
+          var button = document.getElementById("screenshot");
+          button.disabled = true;
+          button.innerHTML = "截图中…";
+          html2canvas(document.body).then((canvas) => {
+            var w = window.open();
+            w.document.title = "保存截图";
+            var i = w.document.createElement("img");
+            w.document.body.appendChild(i);
+            i.src = canvas.toDataURL("image/jpg");
+            w.alert("长按图片或直接保存图片即可");
+            button.innerHTML = "保存网页截图";
+            button.disabled = false;
           });
-        }
-        if (
-          getQueryVariable("showContacts") ||
-          getQueryVariable("showcontacts")
-        ) {
-          var url;
-          var browser = navigator.userAgent.toLowerCase();
-          if (mainsec.info == 1) {
-            mainsec.returnToContact();
-          }
-          if (browser.match(/MicroMessenger/i) == "micromessenger") {
-            //微信浏览器
-            url = "https://u.wechat.com/EO3JtzoXctOZXiAG8tvYHuI";
-            setTimeout(function () {
-              mainsec.showContact("Wechat");
-            }, 1500);
-          } else if (
-            browser.indexOf(" qq") != -1 &&
-            browser.indexOf("mqqbrowser") != -1
-          ) {
-            //qq内置浏览器
-            url =
-              "https://qm.qq.com/cgi-bin/qm/qr?k=OZm0covTGqrELIwI0XKV6LxlKsCcLIsm";
-            setTimeout(function () {
-              mainsec.showContact("QQ");
-            }, 1500);
-          }
-        }
+        },
+      },
+      mounted: function () {
+        this.loadPage();
+        this.startPage = 1;
+        this.endPage = this.page.length;
+      },
+    });
+  </script>
+  <style>
+    .fade-enter-active,
+    .fade-leave-active {
+      transition: all 0.5s;
+    }
 
-        FirstTriggered = false;
+    .fade-enter,
+    .fade-leave-to {
+      opacity: 0;
+      transform: scale(0%, 0%);
+    }
+
+    .qr {
+      text-align: center;
+      width: 80%;
+      height: 80%;
+    }
+  </style>
+  <script>
+    let FirstTriggered = true;
+    function loaded() {
+      timeout = FirstTriggered ? 1200 : 0;
+      var page = getQueryVariable("page");
+      if (page >= mainsec.startPage && page <= mainsec.endPage && page) {
+        var m = mainsec;
+        mainsec.nowPage = page - 1;
+        setTimeout(function () {
+          m.rotateCard(-360, 1, "Y");
+          setTimeout(function () {
+            m.loadPage();
+            m.info = 1;
+            m.Contacts = 0;
+          }, 400);
+        }, timeout);
       }
-    </script>
-    <script src="js/common.js"></script>
-  </body>
+      if (FirstTriggered) {
+        $("body").on("dblclick", "img", function () {
+          window.open(this.src);
+        });
+      }
+      if (
+        getQueryVariable("showContacts") ||
+        getQueryVariable("showcontacts")
+      ) {
+        var url;
+        var browser = navigator.userAgent.toLowerCase();
+        if (mainsec.info == 1) {
+          mainsec.returnToContact();
+        }
+        if (browser.match(/MicroMessenger/i) == "micromessenger") {
+          //微信浏览器
+          url = "https://u.wechat.com/EO3JtzoXctOZXiAG8tvYHuI";
+          setTimeout(function () {
+            mainsec.showContact("Wechat");
+          }, 1500);
+        } else if (
+          browser.indexOf(" qq") != -1 &&
+          browser.indexOf("mqqbrowser") != -1
+        ) {
+          //qq内置浏览器
+          url =
+            "https://qm.qq.com/cgi-bin/qm/qr?k=OZm0covTGqrELIwI0XKV6LxlKsCcLIsm";
+          setTimeout(function () {
+            mainsec.showContact("QQ");
+          }, 1500);
+        }
+      }
+
+      FirstTriggered = false;
+    }
+  </script>
+  <script src="js/common.js"></script>
+</body>
+
 </html>
