@@ -1,0 +1,148 @@
+/* Dark Mode Styles */
+body.dark-mode {
+    background: #1a1a1a !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode a {
+    color: #4db8e8 !important;
+}
+
+body.dark-mode a:hover {
+    color: #6bc5f0 !important;
+}
+
+body.dark-mode b,
+body.dark-mode strong {
+    color: #ffffff !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #ffffff !important;
+}
+
+body.dark-mode p {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode code {
+    background: #2d2d2d !important;
+    border: solid 2px #404040 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .box {
+    border: solid 2px #404040 !important;
+    background: #2d2d2d !important;
+}
+
+body.dark-mode #main > section {
+    border-top: solid 2px #404040 !important;
+}
+
+body.dark-mode table tbody tr {
+    border: solid 1px #404040 !important;
+}
+
+body.dark-mode table tbody tr:nth-child(2n + 1) {
+    background-color: #2d2d2d !important;
+}
+
+body.dark-mode table td {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode table th {
+    color: #ffffff !important;
+}
+
+body.dark-mode table.alt tbody tr td {
+    border: solid 2px #404040 !important;
+}
+
+body.dark-mode header p {
+    color: #b0b0b0 !important;
+}
+
+body.dark-mode small {
+    color: #b0b0b0 !important;
+}
+
+body.dark-mode #nav ul {
+    background-color: #2d4a5a !important;
+}
+
+body.dark-mode #nav ul li a {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode #nav ul li a:hover {
+    color: #ffffff !important;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.dark-mode-toggle:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .dark-mode-toggle {
+    background: #404040;
+    border-color: #666;
+    color: #e0e0e0;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    background: #505050;
+    color: #ffffff;
+}
+
+.dark-mode-toggle::before {
+    content: "🌙";
+    margin-right: 5px;
+}
+
+body.dark-mode .dark-mode-toggle::before {
+    content: "☀️";
+}
+
+/* Responsive adjustments for dark mode toggle */
+@media screen and (max-width: 1042px) {
+    .dark-mode-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .dark-mode-toggle {
+        top: 8px;
+        right: 8px;
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+} 
