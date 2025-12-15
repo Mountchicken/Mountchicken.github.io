@@ -37,6 +37,9 @@
 	
 	<!-- Main -->
 	<div id="main">
+		<button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle sidebar">
+			<span class="toggle-icon">◀</span>
+		</button>
 		<nav id="nav">
 			<ul>
 				<li><a href="index.html">Home</a></li>
@@ -759,6 +762,33 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/dark-mode.js"></script>
+	<script>
+		// Sidebar Toggle Functionality
+		(function() {
+			'use strict';
+			
+			const toggleButton = document.getElementById('sidebar-toggle');
+			const body = document.body;
+			
+			// Check for saved sidebar preference
+			const sidebarState = localStorage.getItem('sidebarState');
+			if (sidebarState === 'hidden') {
+				body.classList.add('sidebar-hidden');
+			}
+			
+			// Toggle sidebar
+			function toggleSidebar() {
+				body.classList.toggle('sidebar-hidden');
+				const isHidden = body.classList.contains('sidebar-hidden');
+				localStorage.setItem('sidebarState', isHidden ? 'hidden' : 'visible');
+			}
+			
+			// Add event listener
+			if (toggleButton) {
+				toggleButton.addEventListener('click', toggleSidebar);
+			}
+		})();
+	</script>
 
 </body>
 

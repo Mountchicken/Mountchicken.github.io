@@ -102,6 +102,18 @@ body.dark-mode #nav ul li a.active {
     }
 }
 
+/* Sidebar toggle button in dark mode */
+body.dark-mode .sidebar-toggle {
+    background: #2d2d2d !important;
+    border-color: #404040 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .sidebar-toggle:hover {
+    background: #404040 !important;
+    color: #ffffff !important;
+}
+
 /* Dark mode toggle button */
 .dark-mode-toggle {
     position: fixed;
