@@ -74,15 +74,32 @@ body.dark-mode small {
 }
 
 body.dark-mode #nav ul {
-    background-color: #2d4a5a !important;
+    background-color: transparent !important;
+    border-bottom: 2px solid #404040 !important;
 }
 
 body.dark-mode #nav ul li a {
-    color: #e0e0e0 !important;
+    color: #b0b0b0 !important;
+    border-bottom: 3px solid transparent !important;
 }
 
 body.dark-mode #nav ul li a:hover {
     color: #ffffff !important;
+    background-color: #2d2d2d !important;
+    border-bottom: 3px solid #4db8e8 !important;
+}
+
+body.dark-mode #nav ul li a:active,
+body.dark-mode #nav ul li a.active {
+    color: #ffffff !important;
+    border-bottom: 3px solid #4db8e8 !important;
+}
+
+/* Responsive navigation for dark mode */
+@media screen and (max-width: 736px) {
+    body.dark-mode #nav ul {
+        flex-wrap: wrap;
+    }
 }
 
 /* Dark mode toggle button */
