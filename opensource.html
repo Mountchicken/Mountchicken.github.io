@@ -1,343 +1,211 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Open Source - Qing Jiang's Homepage</title>
 	<link rel="icon" type="image/x-icon" href="assets/css/images/icon.png">
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="assets/css/dark-mode.css" />
-	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVWWW5E2J3"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
-
 		gtag('config', 'G-ZVWWW5E2J3');
 	</script>
 </head>
 
-<body class="is-preload">
-
-	<!-- Header -->
-	<header id="header">
-		<div class="inner">
-			<a href="#" class="image avatar"><img src="images/avator.jpg" alt="" /></a>
-			<h1>Qing Jiang (蒋擎)</h1>
-			<h2>Ph.D. Candidate in SCUT</h2>
-			<h2><a href="mountchicken@outlook.com">Email</a> | <a href="https://github.com/mountchiken">GitHub</a> | <a href="https://scholar.google.com/citations?user=fzIWn40AAAAJ&hl">Google Scholar</a> </h2>
-			<h2>Object Detection, Vision Lanugage Understanding</h2>
-		</div>
-	</header>
-	
-	<!-- Main -->
-	<div id="main">
-		<button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle sidebar">
-			<span class="toggle-icon">◀</span>
-		</button>
-		<nav id="nav">
-			<ul>
+<body>
+	<div class="container">
+		<!-- Header -->
+		<div class="header">
+			<div class="title"><a href="index.html">Qing Jiang (蒋擎)</a></div>
+			<ul class="nav">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="blogs.html">Blogs</a></li>
 				<li><a href="products.html">Products</a></li>
-				<li><a href="opensource.html">Open Source</a></li>
+				<li class="active"><a href="opensource.html">Open Source</a></li>
 				<li><a href="talks.html">Talks</a></li>
 				<li><a href="CV.pdf" target="_blank">CV</a></li>
 			</ul>
-		</nav>
-		<!-- Open Source -->
-		<section id="one">
-			<header class="major">
-				<h2>Open Source</h2>
-			</header>
-			<p class="about-justify">
-				I am dedicated to open source endeavors, which I believe is the fundamental element for the sustainable development of the AI community. 
-				Here are some open source projects I've contributed to or maintained, covering areas from computer vision to deep learning frameworks.
-			</p>
+		</div>
 
-		</section>
+		<!-- Content -->
+		<div class="content">
+			<section>
+				<h1>Open Source</h1>
+				<p class="about-justify">
+					I am dedicated to open source endeavors, which I believe is the fundamental element for the sustainable development of the AI community.
+					Here are some open source projects I've contributed to or maintained, covering areas from computer vision to deep learning frameworks.
+				</p>
+			</section>
 
-		<!-- All Open Source Projects -->
-		<section id="two">
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://github.com/Mountchicken/Resophy">
-							<video loop playsinline autoPlay muted
-							src="images/open_source/resophy.mp4" alt="SweetDreamer" style="width:105%; height:90%;"> </video>
-						</a>
-						<h3 hidden>Agentic Paper Reading Tool: Resophy</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								Agentic Paper Reading Tool: Resophy
-							</h4>
+			<section>
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://github.com/Mountchicken/Resophy">
+								<video loop playsinline autoPlay muted src="images/open_source/resophy.mp4" style="width:105%; height:90%;"></video>
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>Agentic Paper Reading Tool: Resophy</h4>
 							<h5>
-								🎯 Read research papers faster with AI. Resophy is an HTML-based AI paper reader with: 🤖 AI Translation & Analysis — instantly understand structure, contributions, and results 🚀 Daily arXiv Recommendations — discover relevant papers with less noise 🛠️ Vibe Coding Oriented — agent-friendly and easy to customize.
+								Read research papers faster with AI. Resophy is an HTML-based AI paper reader with AI Translation & Analysis, Daily arXiv Recommendations, and Vibe Coding Oriented design.
 							</h5>
 							<h5>
-								<a href="https://github.com/Mountchicken/Resophy"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/Mountchicken/Resophy" /> </a>
-						</span>
-						</h5>
-						</span>
-					</div>
+								<a href="https://github.com/Mountchicken/Resophy"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/Mountchicken/Resophy" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
 
-				</article>
-			</div>
-
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="blogs/blog1.html" data-poptrox="youtube" class="video fit thumb">
-							<img src="images/open_source/cookbook.jpg" alt="vlsi" style="width:100%; height:80%;" > 
-						</a>
-						<h3 hidden>Cookbook to Craft Good Code</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								Cookbook to Craft Good Code
-							</h4>
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<img src="images/open_source/cookbook.jpg" alt="CodeCookbook" style="width:100%; height:80%;">
+						</div>
+						<div class="col-8">
+							<h4>Cookbook to Craft Good Code</h4>
 							<h5>
 								In this guide, we'll dive into the essentials of crafting great code. We'll go through everything from how to name things clearly and highlight tools that make coding better and easier.
 							</h5>
 							<h5>
-								<a href="https://github.com/Mountchicken/CodeCookbook"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/Mountchicken/CodeCookbook" /> </a>
-						</span>
-						</h5>
-						</span>
-					</div>
+								<a href="https://github.com/Mountchicken/CodeCookbook"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/Mountchicken/CodeCookbook" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
 
-				</article>
-			</div>
-
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://github.com/open-mmlab/mmocr" data-poptrox="youtube" class="video fit thumb">
-							<img src="images/open_source/mmocr-logo.png" alt="vlsi" style="width:100%; height:80%;" > 
-						</a>
-						<h3 hidden>MMOCR</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								MMOCR
-							</h4>
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://github.com/open-mmlab/mmocr">
+								<img src="images/open_source/mmocr-logo.png" alt="MMOCR" style="width:100%; height:80%;">
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>MMOCR</h4>
 							<h5>
 								OpenMMLab Text Detection, Recognition and Understanding Toolbox.
 							</h5>
 							<h5>
-								<a href="https://github.com/open-mmlab/mmocr"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/open-mmlab/mmocr" /> </a>
-						</span>
-						</h5>
-						</span>
-					</div>
+								<a href="https://github.com/open-mmlab/mmocr"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/open-mmlab/mmocr" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
 
-				</article>
-			</div>
-
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://github.com/HCIILAB/Scene-Text-Recognition-Recommendations" data-poptrox="youtube" class="video fit thumb">
-							<img src="images/open_source/strr.jpeg" alt="vlsi" style="width:100%; height:80%;" > 
-						</a>
-						<h3 hidden>MMOCR</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								Scene Text Recognition Recommendations
-							</h4>
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://github.com/HCIILAB/Scene-Text-Recognition-Recommendations">
+								<img src="images/open_source/strr.jpeg" alt="Scene Text Recognition" style="width:100%; height:80%;">
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>Scene Text Recognition Recommendations</h4>
 							<h5>
-								Long-time maintaining project for recording latest papers, datasets, algorithms, and SOTAs for
-                    scene text recognition
+								Long-time maintaining project for recording latest papers, datasets, algorithms, and SOTAs for scene text recognition.
 							</h5>
 							<h5>
-								<a href="https://github.com/HCIILAB/Scene-Text-Recognition-Recommendations"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/HCIILAB/Scene-Text-Recognition-Recommendations" /> </a>
-						</span>
-						</h5>
-						</span>
-					</div>
+								<a href="https://github.com/HCIILAB/Scene-Text-Recognition-Recommendations"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/HCIILAB/Scene-Text-Recognition-Recommendations" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
 
-				</article>
-			</div>
-
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://github.com/yeungchenwa/OCR-SAM" data-poptrox="youtube" class="video fit thumb">
-							<img src="images/open_source/ocrsam.png" alt="vlsi" style="width:100%; height:80%;" > 
-						</a>
-						<h3 hidden>OCR-SAM</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								OCR-SAM
-							</h4>
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://github.com/yeungchenwa/OCR-SAM">
+								<img src="images/open_source/ocrsam.png" alt="OCR-SAM" style="width:100%; height:80%;">
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>OCR-SAM</h4>
 							<h5>
 								Combining MMOCR with Segment Anything & Stable Diffusion. Automatically detect, recognize and
-                    segment text instances, with serval downstream tasks, e.g., Text Removal and Text Inpainting
+								segment text instances, with several downstream tasks, e.g., Text Removal and Text Inpainting.
 							</h5>
 							<h5>
-								<a href="https://github.com/yeungchenwa/OCR-SAM"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/yeungchenwa/OCR-SAM" /> </a>
-						</span>
-						</h5>
-						</span>
-					</div>
+								<a href="https://github.com/yeungchenwa/OCR-SAM"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/yeungchenwa/OCR-SAM" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
 
-				</article>
-			</div>
-
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://github.com/Mountchicken/Efficient-Deep-Learning" data-poptrox="youtube" class="video fit thumb">
-							<img src="images/open_source/edl.png" alt="vlsi" style="width:100%; height:80%;" > 
-						</a>
-						<h3 hidden>Efficient Deep Learning</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								Efficient Deep Learning
-							</h4>
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://github.com/Mountchicken/Efficient-Deep-Learning">
+								<img src="images/open_source/edl.png" alt="Efficient Deep Learning" style="width:100%; height:80%;">
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>Efficient Deep Learning</h4>
 							<h5>
-								Combining MMOCR with Segment Anything & Stable Diffusion. Automatically detect, recognize and
-                    segment text instances, with serval downstream tasks, e.g., Text Removal and Text Inpainting
+								A collection of resources and techniques for efficient deep learning, covering model compression, pruning, quantization, and knowledge distillation.
 							</h5>
 							<h5>
-								<a href="https://github.com/Mountchicken/Efficient-Deep-Learning"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/Mountchicken/Efficient-Deep-Learning" /> </a>
-						</span>
-						</h5>
-						</span>
-					</div>
+								<a href="https://github.com/Mountchicken/Efficient-Deep-Learning"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/Mountchicken/Efficient-Deep-Learning" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
 
-				</article>
-			</div>
-
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://github.com/Mountchicken/Text-Recognition-on-Cross-Domain-Datasets" data-poptrox="youtube" class="video fit thumb">
-							<img src="images/open_source/trcdd.png" alt="vlsi" style="width:100%; height:80%;" > 
-						</a>
-						<h3 hidden>Text Recognition on Cross Domain Datasets</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								Text Recognition on Cross Domain Datasets
-							</h4>
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://github.com/Mountchicken/Text-Recognition-on-Cross-Domain-Datasets">
+								<img src="images/open_source/trcdd.png" alt="Text Recognition on Cross Domain Datasets" style="width:100%; height:80%;">
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>Text Recognition on Cross Domain Datasets</h4>
 							<h5>
 								Improved Text recognition algorithms on different text domains like scene text, handwritten,
-                    document, Chinese/English
+								document, Chinese/English.
 							</h5>
 							<h5>
-								<a href="https://github.com/Mountchicken/Text-Recognition-on-Cross-Domain-Datasets"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/Mountchicken/Text-Recognition-on-Cross-Domain-Datasets" /> </a>
-						</span>
-						</h5>
-						</span>
-					</div>
+								<a href="https://github.com/Mountchicken/Text-Recognition-on-Cross-Domain-Datasets"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/Mountchicken/Text-Recognition-on-Cross-Domain-Datasets" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
 
-				</article>
-			</div>
-
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://github.com/Mountchicken/Structured_Dreambooth_LoRA" data-poptrox="youtube" class="video fit thumb">
-							<img src="images/open_source/lora.png" alt="vlsi" style="width:100%; height:80%;" > 
-						</a>
-						<h3 hidden>Structured Dreambooth LoRA</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								Structured Dreambooth LoRA
-							</h4>
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://github.com/Mountchicken/Structured_Dreambooth_LoRA">
+								<img src="images/open_source/lora.png" alt="Structured Dreambooth LoRA" style="width:100%; height:80%;">
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>Structured Dreambooth LoRA</h4>
 							<h5>
 								Dreambooth (LoRA) with well-organized code structure. Naive adaptation from Diffusers.
 							</h5>
 							<h5>
-								<a href="https://github.com/Mountchicken/Structured_Dreambooth_LoRA"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/Mountchicken/Structured_Dreambooth_LoRA" /> </a>
-						</span>
-						</h5>
-						</span>
-					</div>
-
-				</article>
-			</div>
-		</section>
-
-	</div>
-
-	<!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="icons">
-				<li><a href="mountchicken@outlook.com" class="icon solid fa-envelope"><span
-					class="label">Email</span></a></li>
-				<li><a href="https://twitter.com/mountch1cken" class="icon brands fa-twitter"><span
-						class="label">Twitter</span></a></li>
-				<li><a href="https://github.com/mountchicken" class="icon brands fa-github"><span
-						class="label">Github</span></a></li>
-				<li><a href="https://scholar.google.com/citations?user=fzIWn40AAAAJ&hl=zh-CN" class="icon solid fa-graduation-cap"><span 
-						class="label">GoogleScholar</span></a></li> 
-			</ul>
-			<ul class="copyright">
-				<li>&copy; Qing Jiang. All rights reserved.</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
+								<a href="https://github.com/Mountchicken/Structured_Dreambooth_LoRA"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/Mountchicken/Structured_Dreambooth_LoRA" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
+			</section>
 		</div>
-	</footer>
+
+		<!-- Footer -->
+		<div class="footer">
+			<div class="copyright">
+				&copy; Qing Jiang. All rights reserved.
+			</div>
+		</div>
+	</div>
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.poptrox.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/dark-mode.js"></script>
-	<script>
-		// Sidebar Toggle Functionality
-		(function() {
-			'use strict';
-			
-			const toggleButton = document.getElementById('sidebar-toggle');
-			const body = document.body;
-			
-			// Check for saved sidebar preference
-			const sidebarState = localStorage.getItem('sidebarState');
-			if (sidebarState === 'hidden') {
-				body.classList.add('sidebar-hidden');
-			}
-			
-			// Toggle sidebar
-			function toggleSidebar() {
-				body.classList.toggle('sidebar-hidden');
-				const isHidden = body.classList.contains('sidebar-hidden');
-				localStorage.setItem('sidebarState', isHidden ? 'hidden' : 'visible');
-			}
-			
-			// Add event listener
-			if (toggleButton) {
-				toggleButton.addEventListener('click', toggleSidebar);
-			}
-		})();
-	</script>
-
 </body>
 
 </html>
-
-

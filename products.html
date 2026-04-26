@@ -1,180 +1,94 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Products - Qing Jiang's Homepage</title>
 	<link rel="icon" type="image/x-icon" href="assets/css/images/icon.png">
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="assets/css/dark-mode.css" />
-	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVWWW5E2J3"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
-
 		gtag('config', 'G-ZVWWW5E2J3');
 	</script>
 </head>
 
-<body class="is-preload">
-
-	<!-- Header -->
-	<header id="header">
-		<div class="inner">
-			<a href="#" class="image avatar"><img src="images/avator.jpg" alt="" /></a>
-			<h1>Qing Jiang (蒋擎)</h1>
-			<h2>Ph.D. Candidate in SCUT</h2>
-			<h2><a href="mountchicken@outlook.com">Email</a> | <a href="https://github.com/mountchiken">GitHub</a> | <a href="https://scholar.google.com/citations?user=fzIWn40AAAAJ&hl">Google Scholar</a> </h2>
-			<h2>Object Detection, Vision Lanugage Understanding</h2>
-		</div>
-	</header>
-	
-	<!-- Main -->
-	<div id="main">
-		<button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle sidebar">
-			<span class="toggle-icon">◀</span>
-		</button>
-		<nav id="nav">
-			<ul>
+<body>
+	<div class="container">
+		<!-- Header -->
+		<div class="header">
+			<div class="title"><a href="index.html">Qing Jiang (蒋擎)</a></div>
+			<ul class="nav">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="blogs.html">Blogs</a></li>
-				<li><a href="products.html">Products</a></li>
+				<li class="active"><a href="products.html">Products</a></li>
 				<li><a href="opensource.html">Open Source</a></li>
 				<li><a href="talks.html">Talks</a></li>
 				<li><a href="CV.pdf" target="_blank">CV</a></li>
 			</ul>
-		</nav>
-		<!-- Products -->
-		<section id="one">
-			<header class="major">
-				<h2>Products</h2>
-			</header>
-			<p class="about-justify">
-				Here are some products I've developed that leverage computer vision and AI technologies to solve real-world problems. 
-				These applications demonstrate the practical applications of research in object detection, counting, and annotation.
-			</p>
+		</div>
 
-		</section>
+		<!-- Content -->
+		<div class="content">
+			<section>
+				<h1>Products</h1>
+				<p class="about-justify">
+					Here are some products I've developed that leverage computer vision and AI technologies to solve real-world problems.
+					These applications demonstrate the practical applications of research in object detection, counting, and annotation.
+				</p>
+			</section>
 
-		<!-- All Products -->
-		<section id="two">
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://apps.apple.com/us/app/countanything/id6502489882">
-							<video loop playsinline autoPlay muted
-							src="images/products/countanything.mov" alt="SweetDreamer" style="width:105%; height:90%;"> </video>
-						</a>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								CountAnything: Powerful Counting APP on IOS
-							</h4>
+			<section>
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://apps.apple.com/us/app/countanything/id6502489882">
+								<video loop playsinline autoPlay muted src="images/products/countanything.mov" style="width:105%; height:90%;"></video>
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>CountAnything: Powerful Counting APP on IOS</h4>
 							<h5>
 								CountAnything is a cutting-edge counting application that leverages advanced computer vision algorithms to provide automatic
 								counting capabilities. Whether you're in the industrial, agricultural, or aquaculture sectors, or simply have counting needs,
 								CountAnything makes the process effortless and accurate.
 							</h5>
-						</span>
-						</h5>
-						</span>
-					</div>
+						</div>
+					</article>
+				</div>
 
-				</article>
-			</div>
-			
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://www.trexlabel.com/?source=gh">
-							<video loop playsinline autoPlay muted
-							src="images/products/T-RexLabel.mov" alt="SweetDreamer" style="width:105%; height:90%;"> </video>
-						</a>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								T-Rex Label: Intelligent online annotation tool
-							</h4>
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://www.trexlabel.com/?source=gh">
+								<video loop playsinline autoPlay muted src="images/products/T-RexLabel.mov" style="width:105%; height:90%;"></video>
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>T-Rex Label: Intelligent online annotation tool</h4>
 							<h5>
 								T-Rex Label is an intelligent tool designed for complex scenarios annotation, applicable across various industries.
 								It is the go-to option for those aiming to streamline their workflows and effortlessly create high-quality datasets.
 							</h5>
-						</span>
-					</div>
-
-				</article>
-			</div>
-
-		</section>
-
-	</div>
-
-	<!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="icons">
-				<li><a href="mountchicken@outlook.com" class="icon solid fa-envelope"><span
-					class="label">Email</span></a></li>
-				<li><a href="https://twitter.com/mountch1cken" class="icon brands fa-twitter"><span
-						class="label">Twitter</span></a></li>
-				<li><a href="https://github.com/mountchicken" class="icon brands fa-github"><span
-						class="label">Github</span></a></li>
-				<li><a href="https://scholar.google.com/citations?user=fzIWn40AAAAJ&hl=zh-CN" class="icon solid fa-graduation-cap"><span 
-						class="label">GoogleScholar</span></a></li> 
-			</ul>
-			<ul class="copyright">
-				<li>&copy; Qing Jiang. All rights reserved.</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
+						</div>
+					</article>
+				</div>
+			</section>
 		</div>
-	</footer>
+
+		<!-- Footer -->
+		<div class="footer">
+			<div class="copyright">
+				&copy; Qing Jiang. All rights reserved.
+			</div>
+		</div>
+	</div>
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.poptrox.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/dark-mode.js"></script>
-	<script>
-		// Sidebar Toggle Functionality
-		(function() {
-			'use strict';
-			
-			const toggleButton = document.getElementById('sidebar-toggle');
-			const body = document.body;
-			
-			// Check for saved sidebar preference
-			const sidebarState = localStorage.getItem('sidebarState');
-			if (sidebarState === 'hidden') {
-				body.classList.add('sidebar-hidden');
-			}
-			
-			// Toggle sidebar
-			function toggleSidebar() {
-				body.classList.toggle('sidebar-hidden');
-				const isHidden = body.classList.contains('sidebar-hidden');
-				localStorage.setItem('sidebarState', isHidden ? 'hidden' : 'visible');
-			}
-			
-			// Add event listener
-			if (toggleButton) {
-				toggleButton.addEventListener('click', toggleSidebar);
-			}
-		})();
-	</script>
-
 </body>
 
 </html>
-
-

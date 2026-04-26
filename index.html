@@ -1,586 +1,417 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Qing Jiang, 蒋擎, Homepage, SCUT, South China University of Technology, ByteDance Seed, World Model, General Perception, Computer Vision, Deep Learning">
+	<meta name="author" content="Qing Jiang, 蒋擎">
+	<meta name="keywords" content="Qing Jiang, 蒋擎, Homepage, SCUT, ByteDance Seed, World Model, General Perception, Grounding DINO, T-Rex, ChatRex">
 	<title>Qing Jiang's Homepage</title>
 	<link rel="icon" type="image/x-icon" href="assets/css/images/icon.png">
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="assets/css/dark-mode.css" />
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVWWW5E2J3"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
-
 		gtag('config', 'G-ZVWWW5E2J3');
 	</script>
 </head>
 
-<body class="is-preload">
-
-	<!-- Header -->
-	<header id="header">
-		<div class="inner">
-			<a href="#" class="image avatar"><img src="images/avator.jpg" alt="" /></a>
-			<h1>Qing Jiang (蒋擎)</h1>
-			<h2>Ph.D. Candidate in SCUT</h2>
-			<h2><a href="mountchicken@outlook.com">Email</a> | <a href="https://github.com/mountchiken">GitHub</a> | <a href="https://scholar.google.com/citations?user=fzIWn40AAAAJ&hl">Google Scholar</a> </h2>
-			<h2>Object Detection, Vision Lanugage Understanding</h2>
-		</div>
-	</header>
-	
-	<!-- Main -->
-	<div id="main">
-		<button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle sidebar">
-			<span class="toggle-icon">◀</span>
-		</button>
-		<nav id="nav">
-			<ul>
-				<li><a href="index.html">Home</a></li>
+<body>
+	<div class="container">
+		<!-- Header -->
+		<div class="header">
+			<div class="title"><a href="index.html">Qing Jiang (蒋擎)</a></div>
+			<ul class="nav">
+				<li class="active"><a href="index.html">Home</a></li>
 				<li><a href="blogs.html">Blogs</a></li>
 				<li><a href="products.html">Products</a></li>
 				<li><a href="opensource.html">Open Source</a></li>
 				<li><a href="talks.html">Talks</a></li>
 				<li><a href="CV.pdf" target="_blank">CV</a></li>
 			</ul>
-		</nav>
-		<!-- One -->
-		<section id="one">
-			<header class="major">
-				<h2>About Me</h2>
-			</header>
-			<p class="about-justify">
-				I am now a fourth year Ph.D candidate at SCUT, under the supervision of Prof. <a href="https://www.leizhang.org/">Lei Zhang</a>.
-				My research interests are focused on Object Perception and Understanding. 
-			</p>
-			<p class="about-justify">
-				In research, we have made significant contributions to the open-set object detection field. 
-				We developed text-prompted models including <a href="https://arxiv.org/abs/2405.10300">Grounding DINO 1.5</a>, 
-				visual-prompted models including <a href="https://arxiv.org/abs/2311.13596">T-Rex</a> and <a href="https://arxiv.org/abs/2403.14610">T-Rex2</a>, 
-				and the unified vision model <a href="https://arxiv.org/abs/2411.14347">DINO-X</a>. 
-				We are also exploring the next generation of detection models, proposing MLLM-based approaches such as <a href="https://arxiv.org/abs/2411.18363">ChatRex</a>, 
-				<a href="https://arxiv.org/abs/2503.08507">RexSeek</a>, <a href="https://arxiv.org/abs/2506.04034">Rex-Thinker</a>, and <a href="https://arxiv.org/abs/2510.12798">Rex-Omni</a>.
-			</p>
-			<p class="about-justify">
-				In open source, I maintain and contribute to several impactful projects. I developed <a href="https://github.com/Mountchicken/Resophy">Resophy</a>, an agentic paper reading tool that helps researchers read papers faster with AI. 
-				I created the <a href="https://github.com/Mountchicken/CodeCookbook">CodeCookbook</a> to share best practices for crafting good code. 
-				I was a core contributor to <a href="https://github.com/open-mmlab/mmocr">MMOCR</a>, OpenMMLab's OCR toolbox, 
-				and maintain the <a href="https://github.com/HCIILAB/Scene-Text-Recognition-Recommendations">Scene Text Recognition Recommendations</a> repository, 
-				which tracks the latest papers, datasets, and SOTA methods.
-			</p>
-			<p class="about-justify">
-				In products, We have developed practical applications that bridge research and real-world impact. 
-				<a href="https://apps.apple.com/us/app/countanything/id6502489882">CountAnything</a> is a powerful iOS app that leverages computer vision for automatic counting in industrial, agricultural, and aquaculture sectors. 
-				<a href="https://www.trexlabel.com/?source=gh">T-Rex Label</a> is an intelligent online annotation tool designed for complex scenario annotation, 
-				helping users create high-quality datasets efficiently. I believe open source is the fundamental element for the sustainable development of the AI community.
-			</p>
+		</div>
 
-		</section>
-
-		<!-- Preprint -->
-		<section id="two">
-			<h2>Preprint</h2>
-
-
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://github.com/IDEA-Research/ChatRex">
-							<video loop playsinline autoPlay muted
-							src="images/publications/chatrex.mp4" alt="SweetDreamer" style="width:105%; height:90%;"> </video>
-						</a>
-						<h3 hidden>A MLLM focused on perception tasks</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								ChatRex: Tamming Multimodal LLM for Joint Perception and Understanding
-							</h4>
-							<h5>
-								<h5>
-								<a href="https://mountchicken.github.io/"><strong>Qing Jiang</strong></a>,
-								<a href="https://github.com/luogen1996">Gen Luo</a>, 
-								<a>Yuqin Yang</a>, 
-								<a>Yihao Chen</a>,
-								<a>Yuda Xiong</a>,
-								<a href="https://scholar.google.com/citations?hl=zh-CN&user=U_cvvUwAAAAJ">Zhaoyang Zeng*</a>,
-								<a href="https://rentainhe.github.io/">Tianhe Ren*</a>, 
-								<a href="https://leizhang.org/">Lei Zhang</a>,
-								<br>
-							<h5>
-								[<a href="https://arxiv.org/abs/2411.18363">arXiv 2024</a>] | 
-								[<a href="https://github.com/IDEA-Research/ChatRex">Github</a>]
-								<a href="https://github.com/IDEA-Research/ChatRex"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/ChatRex" /> </a>
-						</span>
-						</h5>
-						</span>
-					</div>
-
-				</article>
+		<!-- Content -->
+		<div class="content">
+			<!-- Profile -->
+			<div class="profile-section">
+				<div class="img">
+					<img alt="photo" src="images/avator.jpg">
+				</div>
+				<div class="text">
+					<h1><strong>Qing Jiang (蒋擎)</strong></h1>
+					<p>Ph.D. Candidate @ South China University of Technology (SCUT)<br>
+					Intern @ ByteDance Seed, BeiJing<br>
+					Prev. Intern @ IDEA, ShenZhen<br>
+					<p>Email: mountchicken@outlook.com</p>
+					<p>
+						<a href="https://scholar.google.com/citations?user=fzIWn40AAAAJ&hl">Google Scholar</a> |
+						<a href="https://github.com/mountchicken">GitHub</a> |
+						<a href="https://twitter.com/mountch1cken">Twitter</a>
+					</p>
+				</div>
 			</div>
 
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://github.com/IDEA-Research/T-Rex">
-							<video loop playsinline autoPlay muted
-							src="images/publications/DINOX.mp4" alt="SweetDreamer" style="width:105%; height:90%;"> </video>
-						</a>
-						<h3 hidden>Interactive and Promptable Model for Open-set Object Detection</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								DINO-X: A Unified Vision Model for Open-World Object Detection and Understanding
-							</h4>
+			<!-- About Me -->
+			<hr>
+			<section id="about">
+				<h1>About Me</h1>
+				<p class="about-justify">
+					I am a fourth year Ph.D. candidate at SCUT, supervised by Prof. <a href="https://www.leizhang.org/">Lei Zhang</a>. I am currently a research intern at ByteDance Seed, working on World Model. Previously, I interned at <a href="https://www.idea.edu.cn/research/cvr.html">IDEA Research</a>. My research interests lie in General Perception, World Model, and Embodied AI.
+				</p>
+				<p class="about-justify">
+					I have contributed to open-set object detection through text-prompted models (<a href="https://arxiv.org/abs/2405.10300">Grounding DINO 1.5</a>), visual-prompted models (<a href="https://arxiv.org/abs/2311.13596">T-Rex</a>, <a href="https://arxiv.org/abs/2403.14610">T-Rex2</a>), the unified model <a href="https://arxiv.org/abs/2411.14347">DINO-X</a>, and MLLM-based approaches (<a href="https://arxiv.org/abs/2411.18363">ChatRex</a>, <a href="https://arxiv.org/abs/2503.08507">RexSeek</a>, <a href="https://arxiv.org/abs/2506.04034">Rex-Thinker</a>, <a href="https://arxiv.org/abs/2510.12798">Rex-Omni</a>). I also maintain open-source projects including <a href="https://github.com/Mountchicken/Resophy">Resophy</a>, <a href="https://github.com/open-mmlab/mmocr">MMOCR</a>, and <a href="https://github.com/HCIILAB/Scene-Text-Recognition-Recommendations">Scene Text Recognition Recommendations</a>.
+				</p>
+			</section>
+
+			<!-- Publications -->
+			<hr>
+			<section id="publications">
+				<h1>Selected Publications</h1>
+
+				<!-- Rex-Omni — arxiv 2510.12798 (Oct 2025) -->
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://github.com/IDEA-Research/Rex-Omni">
+								<video loop playsinline autoPlay muted src="images/publications/RexOmni.mp4" style="width:105%; height:90%;"></video>
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>Detect Anything via Next Point Prediction</h4>
 							<h5>
-								<a href="https://mountchicken.github.io/"><strong>IDEA-CVR Team</strong></a>
-								<br>
+								<a href="https://mountchicken.github.io/"><strong>Qing Jiang</strong></a>,
+								Junan Huo,
+								<a href="https://seanchenxy.github.io/">Xingyu Chen</a>,
+								Yuda Xiong,
+								<a href="https://scholar.google.com/citations?hl=zh-CN&user=U_cvvUwAAAAJ">Zhaoyang Zeng</a>,
+								Yihao Chen,
+								<a href="https://rentainhe.github.io/">Tianhe Ren</a>,
+								Junzhi Yu,
+								<a href="https://leizhang.org/">Lei Zhang</a>
 							</h5>
 							<h5>
-								[<a href="https://arxiv.org/abs/2411.14347">arXiv 2024</a>] | 
-								[<a href="https://deepdataspace.com/blog/7">Homepage</a>] | [<a href="https://github.com/IDEA-Research/DINO-X-API">Github</a>] | [<a href="https://deepdataspace.com/playground/dino-x/">Demo</a>] |
-								<a href="https://github.com/IDEA-Research/DINO-X-API"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/DINO-X-API" /> </a>
-							</span>
-						</h5>
-						</span>
-					</div>
+								[<a href="https://arxiv.org/abs/2510.12798">CVPR 2026</a>] |
+								[<a href="https://github.com/IDEA-Research/Rex-Omni">Github</a>]
+								<a href="https://github.com/IDEA-Research/Rex-Omni"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/Rex-Omni" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
 
-				</article>
-			</div>
+				<!-- Rex-Thinker — arxiv 2506.04034 (Jun 2025) -->
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://github.com/IDEA-Research/Rex-Thinker">
+								<video loop playsinline autoPlay muted src="images/publications/Rex-Thinker.mp4" style="width:105%; height:90%;"></video>
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>Rex-Thinker: Grounded Object Referring via Chain-of-Thought Reasoning</h4>
+							<h5>
+								<a href="https://mountchicken.github.io/"><strong>Qing Jiang*</strong></a>,
+								<a href="https://seanchenxy.github.io/">Xingyu Chen*</a>,
+								<a href="https://scholar.google.com/citations?hl=zh-CN&user=U_cvvUwAAAAJ">Zhaoyang Zeng</a>,
+								Junzhi Yu,
+								<a href="https://leizhang.org/">Lei Zhang</a>
+							</h5>
+							<h5>
+								[<a href="https://arxiv.org/abs/2506.04034">ICLR 2026</a>] |
+								[<a href="https://github.com/IDEA-Research/Rex-Thinker">Github</a>]
+								<a href="https://github.com/IDEA-Research/Rex-Thinker"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/Rex-Thinker" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
 
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://github.com/IDEA-Research/Grounding-DINO-1.5-API">
-							<video loop playsinline autoPlay muted
-							src="images/publications/GroundingDINO1.5.mp4" alt="SweetDreamer" style="width:105%; height:90%;"> </video>
-						</a>
-						<h3 hidden>IDEA Research's Most Capable Open-World Object Detection Model Series</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								Grounding DINO 1.5: Advance the "Edge" of Open-Set Object Detection
-							</h4>
+				<!-- RexSeek — arxiv 2503.08507 (Mar 2025) -->
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://github.com/IDEA-Research/RexSeek">
+								<video loop playsinline autoPlay muted src="images/publications/RexSeek.mp4" style="width:105%; height:90%;"></video>
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>Referring to Any Person</h4>
+							<h5>
+								<a href="https://mountchicken.github.io/"><strong>Qing Jiang</strong></a>,
+								Lin Wu,
+								<a href="https://scholar.google.com/citations?hl=zh-CN&user=U_cvvUwAAAAJ">Zhaoyang Zeng</a>,
+								Tianhe Ren, Yuda Xiong, Yihao Chen,
+								<a href="https://leizhang.org/">Lei Zhang</a>
+							</h5>
+							<h5>
+								[<a href="https://arxiv.org/abs/2503.08507">ICCV 2025</a>] |
+								[<a href="https://github.com/IDEA-Research/RexSeek">Github</a>]
+								<a href="https://github.com/IDEA-Research/RexSeek"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/RexSeek" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
+
+				<!-- ChatRex — arxiv 2411.18363 (Nov 2024) -->
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://github.com/IDEA-Research/ChatRex">
+								<video loop playsinline autoPlay muted src="images/publications/chatrex.mp4" style="width:105%; height:90%;"></video>
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>ChatRex: Taming Multimodal LLM for Joint Perception and Understanding</h4>
+							<h5>
+								<a href="https://mountchicken.github.io/"><strong>Qing Jiang</strong></a>,
+								<a href="https://github.com/luogen1996">Gen Luo</a>,
+								Yuqin Yang, Yihao Chen, Yuda Xiong,
+								<a href="https://scholar.google.com/citations?hl=zh-CN&user=U_cvvUwAAAAJ">Zhaoyang Zeng*</a>,
+								<a href="https://rentainhe.github.io/">Tianhe Ren*</a>,
+								<a href="https://leizhang.org/">Lei Zhang</a>
+							</h5>
+							<h5>
+								[<a href="https://arxiv.org/abs/2411.18363">arXiv 2024</a>] |
+								[<a href="https://github.com/IDEA-Research/ChatRex">Github</a>]
+								<a href="https://github.com/IDEA-Research/ChatRex"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/ChatRex" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
+
+				<!-- DINO-X — arxiv 2411.14347 (Nov 2024) -->
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://github.com/IDEA-Research/T-Rex">
+								<video loop playsinline autoPlay muted src="images/publications/DINOX.mp4" style="width:105%; height:90%;"></video>
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>DINO-X: A Unified Vision Model for Open-World Object Detection and Understanding</h4>
+							<h5>
+								<a href="https://mountchicken.github.io/"><strong>IDEA-CVR Team</strong></a>
+							</h5>
+							<h5>
+								[<a href="https://arxiv.org/abs/2411.14347">arXiv 2024</a>] |
+								[<a href="https://deepdataspace.com/blog/7">Homepage</a>] |
+								[<a href="https://github.com/IDEA-Research/DINO-X-API">Github</a>] |
+								[<a href="https://deepdataspace.com/playground/dino-x/">Demo</a>]
+								<a href="https://github.com/IDEA-Research/DINO-X-API"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/DINO-X-API" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
+
+				<!-- Grounding DINO 1.5 — arxiv 2405.10300 (May 2024) -->
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://github.com/IDEA-Research/Grounding-DINO-1.5-API">
+								<video loop playsinline autoPlay muted src="images/publications/GroundingDINO1.5.mp4" style="width:105%; height:90%;"></video>
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>Grounding DINO 1.5: Advance the "Edge" of Open-Set Object Detection</h4>
 							<h5>
 								<a href="https://rentainhe.github.io/">Tianhe Ren*</a>,
 								<a href="https://mountchicken.github.io/"><strong>Qing Jiang*</strong></a>,
-								<a href="https://www.lsl.zone/">Shilong Liu*</a>, 
-								<a href="https://scholar.google.com/citations?hl=zh-CN&user=U_cvvUwAAAAJ">Zhaoyang Zeng*</a>, 
-								<a>Wenlong Liu</a>,
-								<a>Han Gao</a>,
-								<a>Hongjie Huang</a>,
-								<a>Zhengyu Ma</a>,
-								<a>Xiaoke Jiang</a>,
-								<a>Yihao Chen</a>,
-								<a>Yuda Xiong</a>,
+								<a href="https://www.lsl.zone/">Shilong Liu*</a>,
+								<a href="https://scholar.google.com/citations?hl=zh-CN&user=U_cvvUwAAAAJ">Zhaoyang Zeng*</a>,
+								Wenlong Liu, Han Gao, Hongjie Huang, Zhengyu Ma, Xiaoke Jiang, Yihao Chen, Yuda Xiong,
 								<a href="https://haozhang534.github.io/">Hao Zhang</a>,
 								<a href="https://fengli-ust.github.io/">Feng Li</a>,
-								<a>Peijun Tang</a>,
-								<a>Kent Yu</a>,
-								<a href="https://leizhang.org/">Lei Zhang</a>,
-								<br>
+								Peijun Tang, Kent Yu,
+								<a href="https://leizhang.org/">Lei Zhang</a>
 							</h5>
 							<h5>
-								[<a href="https://arxiv.org/abs/2405.10300">arXiv Preprint 2024</a>] | 
-								[<a href="https://deepdataspace.com/home">Homepage</a>] | [<a href="https://github.com/IDEA-Research/Grounding-DINO-1.5-API">Github</a>] | [<a href="https://deepdataspace.com/playground/grounding_dino">Demo</a>]
-								<a href="https://github.com/IDEA-Research/Grounding-DINO-1.5-API"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/Grounding-DINO-1.5-API" /> </a>
-							</span>
-						</h5>
-						</span>
-					</div>
+								[<a href="https://arxiv.org/abs/2405.10300">arXiv Preprint 2024</a>] |
+								[<a href="https://deepdataspace.com/home">Homepage</a>] |
+								[<a href="https://github.com/IDEA-Research/Grounding-DINO-1.5-API">Github</a>] |
+								[<a href="https://deepdataspace.com/playground/grounding_dino">Demo</a>]
+								<a href="https://github.com/IDEA-Research/Grounding-DINO-1.5-API"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/Grounding-DINO-1.5-API" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
 
-				</article>
-			</div>
-
-			
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<!-- <div class="col-4">
-						<a href="images/humantomato.gif">
-							<img
-								src="images/humantomato.gif" alt="EG2022_MoCo-Flow" >
-						</a>
-						<h3 hidden>We present the <b>FIRST</b> attempt to generate whole-body motions with text description.</h3>
-					</div> -->
-					<div class="col-4">
-						<a href="https://github.com/IDEA-Research/T-Rex/tree/main">
-							<video loop playsinline autoPlay muted
-							src="images/publications/T-Rex.mp4" alt="SweetDreamer" style="width:105%; height:90%;"> </video>
-						</a>
-						<h3 hidden>Interactive Object Counting Model</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								T-Rex: Counting by Visual Prompting
-							</h4>
+				<!-- T-Rex2++ — arxiv 2403.14610 (Mar 2024, TPAMI journal extension) -->
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://www.computer.org/csdl/journal/tp/5555/01/11430523/2eNCdVd1Fa8">
+								<img src="images/publications/trex2pp.png" alt="T-Rex2++" style="width:100%; height:80%;">
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>T-Rex2++: Towards Generic Object Perception Via Text-Visual Prompt Synergy</h4>
 							<h5>
 								<a href="https://mountchicken.github.io/"><strong>Qing Jiang</strong></a>,
-								<a href="https://fengli-ust.github.io/">Feng Li</a>, 
-								<a href="https://rentainhe.github.io/">Tianhe Ren</a>, 
+								<a href="https://fengli-ust.github.io/">Feng Li</a>,
+								<a href="https://scholar.google.com/citations?hl=zh-CN&user=U_cvvUwAAAAJ">Zhaoyang Zeng</a>,
+								<a href="https://rentainhe.github.io/">Tianhe Ren</a>,
 								<a href="https://www.lsl.zone/">Shilong Liu</a>,
-								<a href="https://scholar.google.com/citations?hl=zh-CN&user=U_cvvUwAAAAJ">Zhaoyang Zeng</a>,
-								<a>Kent Yu</a>,
-								<a href="https://leizhang.org/">Lei Zhang</a>,
-								<br>
+								<a href="https://leizhang.org/">Lei Zhang</a>
 							</h5>
 							<h5>
-								[<a href="https://arxiv.org/abs/2311.13596">arXiv Preprint 2024</a>] | 
-								[<a href="https://trex-counting.github.io/">Homepage</a>] | [<a href="https://github.com/IDEA-Research/T-Rex/tree/main">Github</a>] | [<a href="https://deepdataspace.com/playground/ivp">Demo</a>]
-								<a href="https://github.com/IDEA-Research/T-Rex"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/T-Rex" /> </a>
-							</span>
-						</h5>
-						</span>
-					</div>
+								[<a href="https://arxiv.org/abs/2403.14610">TPAMI 2026</a>] |
+								[<a href="https://deepdataspace.com/home">Homepage</a>] |
+								[<a href="https://github.com/IDEA-Research/T-Rex">Github</a>] |
+								[<a href="https://deepdataspace.com/playground/ivp">Demo</a>]
+								<a href="https://github.com/IDEA-Research/T-Rex"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/T-Rex" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
 
-				</article>
-			</div>
-
-		</section>
-
-		<!-- Publications -->
-		<section id="two">
-			<h2>Publications</h2>
-
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://github.com/IDEA-Research/Rex-Omni">
-							<video loop playsinline autoPlay muted
-							src="images/publications/RexOmni.mp4" alt="SweetDreamer" style="width:105%; height:90%;"> </video>
-						</a>
-						<h3 hidden>A MLLM focused on perception tasks</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								Detect Anything via Next Point Prediction
-							</h4>
+				<!-- T-Rex2 — arxiv 2403.14610 (Mar 2024, ECCV conference) -->
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://github.com/IDEA-Research/T-Rex">
+								<video loop playsinline autoPlay muted src="images/publications/T-Rex2.mov" style="width:105%; height:90%;"></video>
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>T-Rex2: Towards Generic Object Detection via Text-Visual Prompt Synergy</h4>
 							<h5>
-								<h5>
 								<a href="https://mountchicken.github.io/"><strong>Qing Jiang</strong></a>,
-								<a>Junan Huo</a>, 
-								<a href="https://seanchenxy.github.io/">Xingyu Chen</a>, 
-								<a>Yuda Xiong</a>,
+								<a href="https://fengli-ust.github.io/">Feng Li</a>,
 								<a href="https://scholar.google.com/citations?hl=zh-CN&user=U_cvvUwAAAAJ">Zhaoyang Zeng</a>,
-								<a>Yihao Chen</a>,
-								<a href="https://rentainhe.github.io/">Tianhe Ren</a>, 
-								<a>Junzhi Yu</a>,
+								<a href="https://rentainhe.github.io/">Tianhe Ren</a>,
+								<a href="https://www.lsl.zone/">Shilong Liu</a>,
 								<a href="https://leizhang.org/">Lei Zhang</a>
-								<br>
-							<h5>
-								[<a href="https://arxiv.org/abs/2510.12798">CVPR 2026</a>] | 
-								[<a href="https://github.com/IDEA-Research/Rex-Omni">Github</a>]
-								<a href="https://github.com/IDEA-Research/Rex-Omni"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/Rex-Omni" /> </a>
-						</span>
-						</h5>
-						</span>
-					</div>
-
-				</article>
-			</div>
-
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://www.computer.org/csdl/journal/tp/5555/01/11430523/2eNCdVd1Fa8" data-poptrox="youtube" class="video fit thumb">
-							<img src="images/publications/trex2pp.png" alt="vlsi" style="width:100%; height:80%;" > 
-						</a>
-						<h3 hidden>Visual Promptable Object Detection and Segmentation</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								T-Rex2++: Towards Generic Object Perception Via Text-Visual Prompt Synergy
-							</h4>
-							<h5>
-								<a href="https://mountchicken.github.io/"><strong>Qing Jiang</strong></a>,
-								<a href="https://fengli-ust.github.io/">Feng Li</a>, 
-								<a href="https://scholar.google.com/citations?hl=zh-CN&user=U_cvvUwAAAAJ">Zhaoyang Zeng</a>, 
-								<a href="https://rentainhe.github.io/">Tianhe Ren</a>, 
-								<a href="https://www.lsl.zone/">Shilong Liu</a>, 
-								<a href="https://leizhang.org/">Lei Zhang</a>
-								<br>
 							</h5>
 							<h5>
-								[<a href="https://arxiv.org/abs/2403.14610">TPAMI 2026</a>] | 
-								[<a href="https://deepdataspace.com/home">Homepage</a>] | [<a href="https://github.com/IDEA-Research/T-Rex">Github</a>] | [<a href="https://deepdataspace.com/playground/ivp">Demo</a>] |
-								<a href="https://github.com/IDEA-Research/T-Rex"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/T-Rex" /> </a>
-						</span>
-					</div>
-
-				</article>
-			</div>
-
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://github.com/IDEA-Research/Rex-Thinker">
-							<video loop playsinline autoPlay muted
-							src="images/publications/Rex-Thinker.mp4" alt="SweetDreamer" style="width:105%; height:90%;"> </video>
-						</a>
-						<h3 hidden>Reasoning based object referring</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								Rex-Thinker: Grounded Object Referring via Chain-of-Thought Reasoning
-							</h4>
-							<h5>
-								<h5>
-								<a href="https://mountchicken.github.io/"><strong>Qing Jiang*</strong></a>,
-								<a href="https://seanchenxy.github.io/">Xingyu Chen*</a>, 
-								<a href="https://scholar.google.com/citations?hl=zh-CN&user=U_cvvUwAAAAJ">Zhaoyang Zeng</a>,
-								<a>Junzhi Yu</a>, 
-								<a href="https://leizhang.org/">Lei Zhang</a>
-								<br>
-							<h5>
-								[<a href="https://arxiv.org/abs/2506.04034">ICLR 2026</a>] | 
-								[<a href="https://github.com/IDEA-Research/Rex-Thinker">Github</a>]
-								<a href="https://github.com/IDEA-Research/Rex-Thinker"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/Rex-Thinker" /> </a>
-						</span>
-						</h5>
-						</span>
-					</div>
-
-				</article>
-			</div>
-
-
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://github.com/IDEA-Research/RexSeek">
-							<video loop playsinline autoPlay muted
-							src="images/publications/RexSeek.mp4" alt="SweetDreamer" style="width:105%; height:90%;"> </video>
-						</a>
-						<h3 hidden>A MLLM focused on perception tasks</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								Referring to Any Person
-							</h4>
-							<h5>
-								<h5>
-								<a href="https://mountchicken.github.io/"><strong>Qing Jiang</strong></a>,
-								<a>Lin Wu</a>, 
-								<a href="https://scholar.google.com/citations?hl=zh-CN&user=U_cvvUwAAAAJ">Zhaoyang Zeng</a>,
-								<a>Tianhe Ren</a>,
-								<a>Yuda Xiong</a>,
-								<a>Yihao Chen</a>, 
-								<a href="https://leizhang.org/">Lei Zhang</a>
-								<br>
-							<h5>
-								[<a href="https://arxiv.org/abs/2503.08507">ICCV 2025</a>] | 
-								[<a href="https://github.com/IDEA-Research/RexSeek">Github</a>]
-								<a href="https://github.com/IDEA-Research/RexSeek"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/RexSeek" /> </a>
-						</span>
-						</h5>
-						</span>
-					</div>
-
-				</article>
-			</div>
-
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://github.com/IDEA-Research/T-Rex">
-							<video loop playsinline autoPlay muted
-							src="images/publications/T-Rex2.mov" alt="SweetDreamer" style="width:105%; height:90%;"> </video>
-						</a>
-						<h3 hidden>Interactive and Promptable Model for Open-set Object Detection</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								T-Rex2: Towards Generic Object Detection via Text-Visual Prompt Synergy
-							</h4>
-							<h5>
-								<a href="https://mountchicken.github.io/"><strong>Qing Jiang</strong></a>,
-								<a href="https://fengli-ust.github.io/">Feng Li</a>, 
-								<a href="https://scholar.google.com/citations?hl=zh-CN&user=U_cvvUwAAAAJ">Zhaoyang Zeng</a>, 
-								<a href="https://rentainhe.github.io/">Tianhe Ren</a>, 
-								<a href="https://www.lsl.zone/">Shilong Liu</a>, 
-								<a href="https://leizhang.org/">Lei Zhang</a>
-								<br>
+								[<a href="https://arxiv.org/abs/2403.14610">ECCV 2024</a>] |
+								[<a href="https://deepdataspace.com/home">Homepage</a>] |
+								[<a href="https://github.com/IDEA-Research/T-Rex">Github</a>] |
+								[<a href="https://deepdataspace.com/playground/ivp">Demo</a>]
+								<a href="https://github.com/IDEA-Research/T-Rex"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/T-Rex" /></a>
 							</h5>
-							<h5>
-								[<a href="https://arxiv.org/abs/2403.14610">ECCV 2024</a>] | 
-								[<a href="https://deepdataspace.com/home">Homepage</a>] | [<a href="https://github.com/IDEA-Research/T-Rex">Github</a>] | [<a href="https://deepdataspace.com/playground/ivp">Demo</a>] |
-								<a href="https://github.com/IDEA-Research/T-Rex"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/T-Rex" /> </a>
-						</span>
-						</h5>
-						</span>
-					</div>
+						</div>
+					</article>
+				</div>
 
-				</article>
-			</div>
-
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://arxiv.org/pdf/2311.13601.pdf" data-poptrox="youtube" class="video fit thumb">
-							<img src="images/publications/dinov.png" alt="vlsi" style="width:100%; height:80%;" > 
-						</a>
-						<h3 hidden>Visual Promptable Object Detection and Segmentation</h3>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								Visual In-Context Prompting
-							</h4>
+				<!-- Visual In-Context Prompting — arxiv 2311.13601 (Nov 2023) -->
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://arxiv.org/pdf/2311.13601.pdf">
+								<img src="images/publications/dinov.png" alt="Visual In-Context Prompting" style="width:100%; height:80%;">
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>Visual In-Context Prompting</h4>
 							<h5>
-								<a href="https://fengli-ust.github.io/">Feng Li</a>, 
+								<a href="https://fengli-ust.github.io/">Feng Li</a>,
 								<a href="https://mountchicken.github.io/"><strong>Qing Jiang</strong></a>,
-								<a>Hao Zhang</a>,
-								<a>Tianhe Ren</a>,
-								<a>Shilong Liu</a>,
-								<a>Xueyan Zou</a>,
-								<a>Huaizhe Xu</a>,
-								<a>Hongyang Li</a>
-								<a>Chunyuan Li</a>
-								<a>jianwei Yang</a>
-								<a>Lei Zhang</a>
-								<a>Jianfeng Gao</a>
+								Hao Zhang, Tianhe Ren, Shilong Liu, Xueyan Zou, Huaizhe Xu,
+								Hongyang Li, Chunyuan Li, Jianwei Yang, Lei Zhang, Jianfeng Gao
 							</h5>
 							<h5>
 								[<a href="https://arxiv.org/pdf/2311.13601.pdf">CVPR 2024</a>] |
-								[<a href="https://github.com/UX-Decoder/DINOv">Code</a>] |
-								<a href="https://github.com/UX-Decoder/DINOv"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/UX-Decoder/DINOv" /> </a>
-						</span>
-						</h5>
-						</span>
-					</div>
+								[<a href="https://github.com/UX-Decoder/DINOv">Code</a>]
+								<a href="https://github.com/UX-Decoder/DINOv"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/UX-Decoder/DINOv" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
 
-				</article>
-			</div>
-
-			<!-- <hr style="height:1px;border:none;border-top:1px dashed #0066CC;"/> -->
-
-			<div class="box alt">
-				<article class="row gtr-50 gtr-uniform work-item">
-					<div class="col-4">
-						<a href="https://arxiv.org/abs/2307.08723" data-poptrox="youtube" class="video fit thumb">
-							<img src="images/publications/union14m.png" alt="iccv" style="width:100%; height:80%;" > 
-						</a>
-					</div>
-					<div class="col-8">
-						<span>
-							<h4>
-								Revisiting Scene Text Recognition: A Data Perspective
-							</h4>
+				<!-- T-Rex — arxiv 2311.13596 (Nov 2023) -->
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://github.com/IDEA-Research/T-Rex/tree/main">
+								<video loop playsinline autoPlay muted src="images/publications/T-Rex.mp4" style="width:105%; height:90%;"></video>
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>T-Rex: Counting by Visual Prompting</h4>
 							<h5>
 								<a href="https://mountchicken.github.io/"><strong>Qing Jiang</strong></a>,
-								<a>Jiapeng Wang</a>,
-								<a>Dezhi Peng</a>,
-								<a>Chongyu Liu</a>,
-								<a>Lianwen Jin</a>
+								<a href="https://fengli-ust.github.io/">Feng Li</a>,
+								<a href="https://rentainhe.github.io/">Tianhe Ren</a>,
+								<a href="https://www.lsl.zone/">Shilong Liu</a>,
+								<a href="https://scholar.google.com/citations?hl=zh-CN&user=U_cvvUwAAAAJ">Zhaoyang Zeng</a>,
+								Kent Yu,
+								<a href="https://leizhang.org/">Lei Zhang</a>
 							</h5>
 							<h5>
-								[<a href="https://arxiv.org/abs/2307.08723">ICCV 2023</a>] | 
-								[<a href="https://union14m.github.io/">Homepage</a>] | [<a href="https://github.com/Mountchicken/Union14M">Code</a>] | [<a href="https://huggingface.co/spaces/Mountchicken/MAERec-Gradio">Demo</a>] |
-								<a href="https://github.com/Mountchicken/Union14M"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/Mountchicken/Union14M" /> </a>
-						</span>
-						</h5>
-						</span>
-					</div>
+								[<a href="https://arxiv.org/abs/2311.13596">arXiv Preprint 2024</a>] |
+								[<a href="https://trex-counting.github.io/">Homepage</a>] |
+								[<a href="https://github.com/IDEA-Research/T-Rex/tree/main">Github</a>] |
+								[<a href="https://deepdataspace.com/playground/ivp">Demo</a>]
+								<a href="https://github.com/IDEA-Research/T-Rex"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/IDEA-Research/T-Rex" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
 
-				</article>
-			</div>
+				<!-- Union14M — arxiv 2307.08723 (Jul 2023) -->
+				<div class="box alt">
+					<article class="row gtr-50 gtr-uniform work-item">
+						<div class="col-4">
+							<a href="https://arxiv.org/abs/2307.08723">
+								<img src="images/publications/union14m.png" alt="Union14M" style="width:100%; height:80%;">
+							</a>
+						</div>
+						<div class="col-8">
+							<h4>Revisiting Scene Text Recognition: A Data Perspective</h4>
+							<h5>
+								<a href="https://mountchicken.github.io/"><strong>Qing Jiang</strong></a>,
+								Jiapeng Wang, Dezhi Peng, Chongyu Liu, Lianwen Jin
+							</h5>
+							<h5>
+								[<a href="https://arxiv.org/abs/2307.08723">ICCV 2023</a>] |
+								[<a href="https://union14m.github.io/">Homepage</a>] |
+								[<a href="https://github.com/Mountchicken/Union14M">Code</a>] |
+								[<a href="https://huggingface.co/spaces/Mountchicken/MAERec-Gradio">Demo</a>]
+								<a href="https://github.com/Mountchicken/Union14M"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/Mountchicken/Union14M" /></a>
+							</h5>
+						</div>
+					</article>
+				</div>
+			</section>
 
-		</section>
-
-
-
-		<!-- Three -->
-		<section id="three">
-			<h2>Internships</h2>
-			<div class="table-wrapper">
-				<table>
-					<tbody>
-						<tr>
-							<td><b>International Digital Economy Academy (IDEA)</b> | Research intern</td>
-							<td>2023.06 – now</td>
-						</tr>
-						<tr>
-							<td><b>Shanghai AI Lab (OpenMMLab)</b> | Intern</td>
-							<td>2022.02 – 2022.08</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			
-		</section>
-	</div>
-
-
-	
-	<!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="icons">
-				<li><a href="mountchicken@outlook.com" class="icon solid fa-envelope"><span
-					class="label">Email</span></a></li>
-				<li><a href="https://twitter.com/mountch1cken" class="icon brands fa-twitter"><span
-							class="label">Twitter</span></a></li>
-				<li><a href="https://github.com/mountchicken" class="icon brands fa-github"><span
-							class="label">Github</span></a></li>
-				<li><a href="https://scholar.google.com/citations?user=fzIWn40AAAAJ&hl=zh-CN" class="icon solid fa-graduation-cap"><span 
-							class="label">GoogleScholar</span></a></li> 
-			</ul>
-			<ul class="copyright">
-				<li>&copy; Qing Jiang. All rights reserved.</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
+			<!-- Internships -->
+			<hr>
+			<section id="internships">
+				<h1>Internships</h1>
+				<div class="table-wrapper">
+					<table>
+						<tbody>
+							<tr>
+								<td><b>ByteDance Seed</b> | Research Intern</td>
+								<td>2026.04 – now</td>
+							</tr>
+							<tr>
+								<td><b>International Digital Economy Academy (IDEA)</b> | Research Intern</td>
+								<td>2023.06 – 2026.03</td>
+							</tr>
+							<tr>
+								<td><b>Shanghai AI Lab (OpenMMLab)</b> | Intern</td>
+								<td>2022.02 – 2022.08</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
 		</div>
-	</footer>
+
+		<!-- Footer -->
+		<div class="footer">
+			<div class="copyright">
+				&copy; Qing Jiang. All rights reserved.
+			</div>
+		</div>
+	</div>
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.poptrox.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/dark-mode.js"></script>
-	<script>
-		// Sidebar Toggle Functionality
-		(function() {
-			'use strict';
-			
-			const toggleButton = document.getElementById('sidebar-toggle');
-			const body = document.body;
-			
-			// Check for saved sidebar preference
-			const sidebarState = localStorage.getItem('sidebarState');
-			if (sidebarState === 'hidden') {
-				body.classList.add('sidebar-hidden');
-			}
-			
-			// Toggle sidebar
-			function toggleSidebar() {
-				body.classList.toggle('sidebar-hidden');
-				const isHidden = body.classList.contains('sidebar-hidden');
-				localStorage.setItem('sidebarState', isHidden ? 'hidden' : 'visible');
-			}
-			
-			// Add event listener
-			if (toggleButton) {
-				toggleButton.addEventListener('click', toggleSidebar);
-			}
-		})();
-	</script>
-
 </body>
 
 </html>
